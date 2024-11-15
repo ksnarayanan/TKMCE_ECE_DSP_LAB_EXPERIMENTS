@@ -1,0 +1,25 @@
+clc;
+clf;
+close all;
+clear all;
+n1=input('Enter the starting point of signal: ');
+n2=input('Enter the end point of signal: ');
+sample_points = -n1:1:n2;
+amp_1 = zeros(1,n1+1);
+for(i=1:n2)
+    amp_2(i)=i*i;
+end
+amp_2;
+amplitude=[amp_1 amp_2];
+
+subplot(121);
+plot(sample_points, amplitude)
+grid on;
+xlabel('time&');
+ylabel('amplitude');
+
+subplot(122);
+stem(sample_points, amplitude)
+grid on;
+xlabel('time');
+ylabel('amplitude');
