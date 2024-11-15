@@ -1,0 +1,22 @@
+clc;
+clf;
+close all;
+clear all;
+
+Am = input('Enter amplitude: ');
+Fm=input("Enter frequency: ");
+cy=input('Enter number of cycles: ');
+t=0:(1/(50*Fm)):cy/Fm;
+amplitude=Am*sawtooth(2*pi*Fm*t,.50);
+
+subplot(121);
+plot(t,amplitude);
+grid on;
+xlabel('Time');
+ylabel('Amplitude');
+
+subplot(122);
+stem(t,amplitude);
+grid on;
+xlabel('Time');
+ylabel('Amplitude');
